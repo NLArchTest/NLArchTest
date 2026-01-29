@@ -1,0 +1,36 @@
+DSL,API,Attempts
+"class[public] should beExtendedBy class(packagename ""packageIdentifier"");","classes().that().arePublic().should().onlyBeExtendedByClassesThat().resideInAPackage(""packageIdentifier"")",2
+"class [static] should access class[(packagename ""packageIdentifier"")];","classes().that().haveModifier(JavaModifier.STATIC).should().accessClassesThat().resideInAPackage(""packageIdentifier"")",1
+class[interface public] should implement class(match ¡°myclass¡±),"classes().that().arePublic().and().areInterfaces().should().implementClassesThat().haveNameMatching(""myclass"")",0
+"class [public (packagename ""packageIdentifier"")] should dependOn class[match ""myclass""];","classes().that().arePublic().and().resideInAPackage(""packageIdentifier"").should().dependOnClassesThat().haveNameMatching(""myclass"")",4
+"class [implement ""typeName""] should beExtendedBy class [haveNameMatching ""className""];","classes().that().implement(""typeName"").should().onlyBeExtendedByClassesThat().haveNameMatching(""className"")",0
+"class [inner (packagename ""packageIdentifier"")] should not implement class[match ""className""];","classes().that().areInnerClasses().and().resideInAPackage(""packageIdentifier"").should().notImplementClassesThat().haveNameMatching(""className"")",1
+"class [public (implement ""typeName"")] should not access class [(annotate ""annotationTypeName"")];","classes().that().arePublic().and().implement(""typeName"").should().notBeAccesseClassesThat().areAnnotatedWith(""annotationTypeName"")",4
+"class [implement ""typeName""] should access class [(packagename ""packageIdentifier1"")];","classes().that().implement(""typeName"").should().accessClassesThat().resideInAPackage(""packageIdentifier1"")",1
+Trains Failed,Trains Failed,Trains Failed
+"class [public] should dependOn class[(packagename ""packageIdentifier"")];","classes().that().arePublic().should().dependOnClassesThat().resideInAPackage(""packageIdentifier"")",0
+class [public] should not beExtendedBy class[private];,classes().that().arePublic().should().notBeExtendedByClassesThat().arePrivate(),1
+Trains Failed,Trains Failed,Trains Failed
+class [final] should not implement class[final];,classes().that().haveModifier(JavaModifier.FINAL).should().notImplementClassesThat().areFinal(),0
+class [local] should not dependOn class [local];,noClasses().that().areLocalClasses().should().dependOnClassesThat().areLocalClasses(),0
+class [interface] should not implement class [static];,classes().that().areInterfaces().should().notImplementClassesThat().areStatic(),0
+Trains Failed,Trains Failed,Trains Failed
+"class [protected (packagename ""packageIdentifier1"")] should implement class [private];","classes().that().areProtected().and().resideInAPackage(""packageIdentifier1"").should().ImplementClassesThat().arePrivate()",0
+Trains Failed,Trains Failed,Trains Failed
+class [protected] should not implement class[private];,classes().that().areProtected().should().notImplementClassesThat().arePrivate(),0
+method[private] should not access;,methods().that().arePrivate().should().notBeAccesse(),0
+"class [public] should haveNameMatching(""classname"");","classes().that().arePublic().should().haveNameMatching(""classname"")",0
+"class [public] should not beAssignableTo(""typeName"");","classes().that().arePublic().should().notBeAssignableTo(""typeName"")",0
+"class [public] not haveParameterTypes(""typeName"");","classes().that().arePublic().should().no such no operator(""typeName"")",2
+"class [public] should not haveFullNameMatching(""regex"");","classes().that().arePublic().should().haveFullNameNotMatching(""regex"")",0
+"class [public] should haveRawReturnType(""typeName"");","classes().that().arePublic().should().haveRawReturnType(""typeName"")",0
+Trains Failed,Trains Failed,Trains Failed
+"class [public] should not haveNameEndingWith(""regex"");","classes().that().arePublic().should().haveNameNotEndingWith(""regex"")",0
+"class [private] should haveNameStartingWith(""regex"");","classes().that().arePrivate().should().haveNameStartingWith(""regex"")",0
+"class [protected] should declareThrowableOfType (""typeName"");","classes().that().areProtected().should().declareThrowableOfType(""typeName"")",0
+Trains Failed,Trains Failed,Trains Failed
+class [static] should BePublic;,classes().that().haveModifier(JavaModifier.STATIC).should().bePublic(),0
+class [ anonymous ] should BePublic;,classes().that().areAnonymousClasses().should().bePublic(),0
+class [public] should BeProtected;,classes().that().arePublic().should().beProtected(),0
+class [public] should BeAbstract;,classes().that().arePublic().should().beAbstract(),0
+class[anonymous] should BeEnums;,classes().that().areAnonymousClasses().should().beEnums(),0

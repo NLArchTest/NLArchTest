@@ -1,0 +1,35 @@
+Public classes should be extended by classes in package 'packageIdentifier'.
+Static classes should access classes in package 'packageIdentifier'.
+Public interface classes should implement classes matching 'myclass'.
+Public classes in package 'packageIdentifier' should depend on classes matching 'myclass'.
+Classes implementing 'typeName' should be extended by classes matching 'className'.
+Inner classes in package 'packageIdentifier' should not implement classes matching 'className'.
+Public classes implementing 'typeName' should not access classes annotated with 'annotationTypeName'.
+Classes implementing 'typeName' should access classes in package 'packageIdentifier1'.
+Classes implementing 'typeName' should not implement classes matching 'className'.
+Public classes should depend on classes in package 'packageIdentifier'.
+Public classes should not be extended by private classes.
+Public classes should not access private classes.
+Final classes should not implement final classes.
+Local classes should not depend on local classes.
+Interface classes should not implement static classes.
+Top-level classes should not implement private classes.
+Protected classes should implement private classes in package 'packageIdentifier1'.
+Public classes should be accessed by static classes matching 'className'.
+Protected classes should not implement private classes.
+Package-private classes should not access private methods.
+Public classes should have names matching 'classname'.
+Public classes should not be assignable to 'typeName'.
+Public classes should not have parameter types of 'typeName'.
+Public classes should not have full names matching the regex.
+Public classes should have a return type of 'typeName'.
+Public classes should have names containing the regex.
+Public classes should not have names ending with the regex.
+Private classes should have names starting with the regex.
+Protected classes should declare throwable types of 'typeName'.
+Package-private classes should not be annotated with 'annotationTypeName'.
+Static classes should be public.
+Anonymous classes should be public.
+Public classes should be protected.
+Public classes should be abstract.
+Anonymous classes should be enums.
